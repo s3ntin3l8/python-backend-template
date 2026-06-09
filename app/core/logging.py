@@ -19,3 +19,19 @@ class JsonFormatter(logging.Formatter):
         if record.exc_info:
             entry["exc_info"] = self.formatException(record.exc_info)
         return json.dumps(entry)
+
+
+def setup_logging(name: str, level: int = logging.INFO) -> logging.Logger:
+    """Return a logger that emits single-line JSON via JsonFormatter.
+
+    Idempotent: safe to call once per module at import time without stacking
+    duplicate handlers.
+    """
+    logger = logging.getLogger(name)
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(JsonFormatter())
+        logger.addHandler(handler)
+        logger.setLevel(level)
+        logger.propagate = False
+    return logger

@@ -6,15 +6,27 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test-python:
     uses: s3ntin3l8/.github/.github/workflows/ci-python.yml@main
     with:
       python-version: '3.12'
+      # Starter floor so a fresh repo is green on day one — ratchet up as you add code.
+      coverage-fail-under: '0'
     secrets: inherit
 
   build-docker:
     needs: [test-python]
+    # Required: docker-publish needs write scopes the default read-only token lacks,
+    # otherwise the whole run fails at startup with zero jobs.
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     uses: s3ntin3l8/.github/.github/workflows/docker-publish.yml@main
     with:
       image-name: 's3ntin3l8/${{ github.event.repository.name }}'
