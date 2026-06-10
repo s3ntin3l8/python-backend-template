@@ -14,7 +14,7 @@ jobs:
   test-python:
     uses: s3ntin3l8/.github/.github/workflows/ci-python.yml@main
     with:
-      python-version: '3.12'
+      python-version: '3.14'
       # Starter floor so a fresh repo is green on day one — ratchet up as you add code.
       coverage-fail-under: '0'
     secrets: inherit
