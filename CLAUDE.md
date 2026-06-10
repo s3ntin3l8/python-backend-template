@@ -54,6 +54,10 @@ read-only and the run otherwise fails at startup with zero jobs. `build-docker` 
 `pyproject.toml`. If your package isn't named `app`, pass `coverage-source:` to the
 `test-python` caller.
 
+> **Codecov TODO:** coverage upload requires a `CODECOV_TOKEN` repo secret and the
+> repo onboarded on [codecov.io](https://about.codecov.io/) before results/badges
+> show. The workflow runs the upload unconditionally; it just no-ops without the token.
+
 ## Conventions
 
 - **Python 3.12+, async-first.** FastAPI + Pydantic v2 + `httpx`.
