@@ -26,3 +26,7 @@ make dev
 
 ## 📦 Releases
 Releases are automated via [Release Please](https://github.com/googleapis/release-please). Use [Conventional Commits](https://www.conventionalcommits.org/) to trigger version bumps.
+
+## License
+
+AGPL-3.0
