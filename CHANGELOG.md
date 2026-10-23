@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/s3ntin3l8/python-backend-template/compare/v0.1.1...v0.1.2) (2026-10-23)
+
+
+### Documentation
+
+* state copyright and the AGPL "or any later version" grant in the README ([#13](https://github.com/s3ntin3l8/python-backend-template/issues/13)) ([0ee4830](https://github.com/s3ntin3l8/python-backend-template/commit/0ee48302e8a42d17c66722e24f4937d6ab9af0dc))
+
 ## [0.1.1](https://github.com/s3ntin3l8/python-backend-template/compare/v0.1.0...v0.1.1) (2026-06-10)
 
 
