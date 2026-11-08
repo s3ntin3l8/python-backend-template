@@ -20,6 +20,9 @@ make dev
 - `make format`: Auto-fix formatting issues.
 - `make clean`: Remove build artifacts and caches.
 
+## 🗄️ Using SQLModel
+`sqlmodel` is declared but not imported by the template. Since 0.0.45 its datetime fields are timezone-aware (UTC): naive `datetime` values raise errors on write. Projects created from this template should store `datetime.now(timezone.utc)` and compare aware datetimes only.
+
 ## 🛡️ Security
 - This project follows the [s3ntin3l8 Global Security Policy](https://github.com/s3ntin3l8/.github/blob/main/SECURITY.md).
 - Security scans (CodeQL) and dependency reviews are automated in the CI pipeline.
