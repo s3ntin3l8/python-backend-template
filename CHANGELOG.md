@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/s3ntin3l8/python-backend-template/compare/v0.1.1...v0.1.2) (2026-11-08)
+
+
+### Documentation
+
+* note sqlmodel's timezone-aware datetimes ([#17](https://github.com/s3ntin3l8/python-backend-template/issues/17)) ([6912d35](https://github.com/s3ntin3l8/python-backend-template/commit/6912d354e802e8b6b81ef483caee04504eb6509f))
+* state copyright and the AGPL "or any later version" grant in the README ([#13](https://github.com/s3ntin3l8/python-backend-template/issues/13)) ([0ee4830](https://github.com/s3ntin3l8/python-backend-template/commit/0ee48302e8a42d17c66722e24f4937d6ab9af0dc))
+
 ## [0.1.1](https://github.com/s3ntin3l8/python-backend-template/compare/v0.1.0...v0.1.1) (2026-06-10)
 
 
